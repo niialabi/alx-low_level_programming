@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -C $CFILE -0 CFILE.O
+gcc -C $CFILE -0 C.s
