@@ -13,7 +13,7 @@ int main(void)
 		putchar(i);
 		if (i == 57)
 		{
-			puchchar (32);
+			putchar (32);
 			continue;
 		}
 		putchar (44);
