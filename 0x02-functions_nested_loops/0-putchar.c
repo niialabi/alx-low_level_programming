@@ -5,6 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
+
 main(void)
 {
 	putchar(95);
