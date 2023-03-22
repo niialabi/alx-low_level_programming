@@ -1,11 +1,12 @@
 #include "main.h"
+
 /**
- * Main - Entry point
- * Program that prints _putchar
+ * main - Entry point
+ *
+ * Description: 'Program that prints _putchar'
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	_putchar(95);
