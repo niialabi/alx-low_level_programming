@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 /**
  * mul - Multiplies two integers a & b
  * @a: Integer 1
@@ -13,5 +12,6 @@ int mul(int a, int b)
 {
 	int result = (a * b);
 
+	_putchar ('\n');
 	return (result);
 }
