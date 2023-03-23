@@ -8,10 +8,10 @@
  *
  * Return: Sucess is if we get results 100352 - -1646592
  */
-int _putchar(char c);
 
 int mul(int a, int b)
 {
-	int result = (a * b);	
+	int result = (a * b);
+
 	return (result);
 }
