@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - A functions that prints small letter alphabet
  * printing small letter alphabets
  *
- * Return: Always 0 (Success)
+ * Return:void
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	void print_alphabet(void)
+	char i;
+
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		for (i = a; i < z; i++)
-			_putchar (i);
+		_putchar(i);
 	}
 	_putchar ('\n');
-	return (0);
 }
