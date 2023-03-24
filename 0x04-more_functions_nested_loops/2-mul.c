@@ -10,13 +10,11 @@
 
 int mul(int a, int b);
 
-int main(void)
+int mul(int a, int b)
 {
-	int i = 2;
-	int j = 5;
 	int res;
 
-	res = mul(i, j);
+	res = mul(a, b);
 
 	return (res);
 }
