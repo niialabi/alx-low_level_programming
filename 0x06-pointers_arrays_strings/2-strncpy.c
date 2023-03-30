@@ -11,10 +11,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int lensrc;
-
-	lensrc = strlen(src);
-	n = lensrc;
+	n = sizeof(src);
 	strncpy(dest, src, n);
 	return (dest);
 }
