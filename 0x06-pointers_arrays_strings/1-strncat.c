@@ -12,7 +12,11 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
+	int destlen;
+
+	destlen = (strlen(dest) + strlen(src));
 	n = strlen(src);
+	dest[destlen] = '\0';
 	strncat(dest, src, n);
 	return (dest);
 }
