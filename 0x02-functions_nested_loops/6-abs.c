@@ -3,7 +3,7 @@
 /**
  * _abs - conversion function
  * Description: conversts to absolute value
- *
+ * @a: parameter to be converted
  * Return: absolute value
  */
 
@@ -15,7 +15,7 @@ int _abs(int a)
 	}
 	else
 	{
-		a = a;
+		a  = a;
 	}
 	return (a);
 }
