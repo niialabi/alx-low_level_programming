@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * *_memset - Set memory function
  * @s: pointer to var
