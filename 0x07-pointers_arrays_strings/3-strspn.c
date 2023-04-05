@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+
 /**
  * _strspn - main function to rtn sbst length
  * @s: main string to be checked
@@ -20,11 +21,15 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (j = 0; j <= aclen; j++)
 		{
-			if (s[i] == accept[j])
+			if (accept[j] == s[i])
 			{
 				retlen++;
 				break;
 			}
+		}
+		if (accept[j] != s[i])
+		{
+			break;
 		}
 	}
 	return (retlen);
