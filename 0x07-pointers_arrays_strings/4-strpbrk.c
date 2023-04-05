@@ -12,6 +12,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i, j, slen, alen;/*slen & alen = string-length of *s & accept*/
 	char *k;
+
 	slen = strlen(s);
 	alen = strlen(accept);
 
