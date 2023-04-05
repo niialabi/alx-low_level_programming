@@ -17,9 +17,9 @@ unsigned int _strspn(char *s, char *accept)
 
 	slen = strlen(s);
 	aclen = strlen(accept);
-	for (i = 0; i <= slen; i++)
+	for (i = 0; i < slen; i++)
 	{
-		for (j = 0; j <= aclen; j++)
+		for (j = 0; j < aclen; j++)
 		{
 			if (accept[j] == s[i])
 			{
