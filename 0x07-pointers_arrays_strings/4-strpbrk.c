@@ -16,9 +16,9 @@ char *_strpbrk(char *s, char *accept)
 	slen = strlen(s);
 	alen = strlen(accept);
 
-	for (i = 0; i <= slen; i++)
+	for (i = 0; i < slen; i++)
 	{
-		for (j = 0; j <= alen; j++)
+		for (j = 0; j < alen; j++)
 		{
 			if (accept[j] == s[i])
 			{
