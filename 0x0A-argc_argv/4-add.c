@@ -27,7 +27,7 @@ int main(__attribute__((unused)) int argc,
 		else
 		{
 			printf("Error\n");
-			return (0);
+			return (1);
 		}
 	}
 	for (j = 1; j < argc; j++)
