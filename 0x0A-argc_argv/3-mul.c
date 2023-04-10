@@ -13,7 +13,7 @@ int main(__attribute__((unused)) int argc,
 
 	if (argc != 3)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	else
