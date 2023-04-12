@@ -14,18 +14,20 @@ char *_strdup(char *str)
 	int len, i;
 	char *newstr;
 
-	len = strlen(str);
-	newstr = (char *)malloc(sizeof(char) * len);
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	else
+
+	len = strlen(str);
+	newstr = (char *)malloc(sizeof(char) * len);
+	if (newstr == NULL)
 	{
-		for (i = 0; i < len; i++)
-		{
-			newstr[i] = str[i];
-		}
+		return (NULL);
+	}
+	for (i = 0; i < len; i++)
+	{
+		newstr[i] = str[i];
 	}
 	return (newstr);
 	free(newstr);
