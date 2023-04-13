@@ -39,9 +39,16 @@ char *str_concat(char *s1, char *s2)
 			break;
 		}
 	}
-	for (j = 0; j < lens1 + lens2 && s2 != NULL; j++)
+	for (j = 0; j < lens1 + lens2; j++)
 	{
-		l3[lens1 + j] = s2[j];
+		if (s2 != NULL)
+		{
+			l3[lens1 + j] = s2[j];
+		}
+		else
+		{
+			break;
+		}
 	}
 	return (l3);
 	free(l3);
