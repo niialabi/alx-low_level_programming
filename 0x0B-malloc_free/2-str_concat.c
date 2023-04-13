@@ -47,6 +47,7 @@ char *str_concat(char *s1, char *s2)
 		}
 		else
 		{
+			lens2 = 0;
 			break;
 		}
 	}
