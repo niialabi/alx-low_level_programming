@@ -27,29 +27,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < lens1; i++)
+	for (i = 0; i < lens1 && s1 != NULL; i++)
 	{
-		if (s1 != NULL)
-		{
 			l3[i] = s1[i];
-		}
-		else
-		{
-			lens1 = 0;
-			break;
-		}
 	}
-	for (j = 0; j < lens1 + lens2; j++)
+	for (j = 0; j < lens1 + lens2 && s2 != NULL; j++)
 	{
-		if (s2 != NULL)
-		{
 			l3[lens1 + j] = s2[j];
-		}
-		else
-		{
-			lens2 = 0;
-			break;
-		}
 	}
 	return (l3);
 	free(l3);
