@@ -29,11 +29,11 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (i = 0; i < lens1 && s1 != NULL; i++)
 	{
-			l3[i] = s1[i];
+		l3[i] = s1[i];
 	}
 	for (j = 0; j < lens1 + lens2 && s2 != NULL; j++)
 	{
-			l3[lens1 + j] = s2[j];
+		l3[lens1 + j] = s2[j];
 	}
 	return (l3);
 	free(l3);
