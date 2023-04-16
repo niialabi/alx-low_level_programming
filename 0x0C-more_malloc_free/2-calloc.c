@@ -5,7 +5,7 @@
  * _calloc - dyna alloca memory & init = 0
  * @nmemb: number of elements
  * @size: size in bytes of each element
- *
+ * Return: pointer to newly aloc mem
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
