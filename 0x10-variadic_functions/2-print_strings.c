@@ -8,19 +8,22 @@
  * @n: number of args
  *
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int i;
-	
+	const char *topr;
+
 	va_start(args, n);
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
-		{
-			printf("%d", va_arg(args, int));
-			if (separator && i != (n - 1))
-				printf("%s", separator);
-		}
+		topr = va_arg(args, char *);
+		if (topr)
+			printf("%s", topr);
+		else
+			printf("(nil)");
+		if (separator && i != n -1)
+			printf("%s", separator);
 	}
 	printf("\n");
 }
