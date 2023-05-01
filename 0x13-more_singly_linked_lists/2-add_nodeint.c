@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * add_nodeint - adds new node to begining 
+ * add_nodeint - adds new node to begining
  * @head: pointer of head pointer
  * @n: int value no.
  *
