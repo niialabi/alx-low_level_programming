@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * free_listint - frees alloc memory
  * @head: pointer to list
@@ -13,6 +14,6 @@ void free_listint(listint_t *head)
 	{
 		temp = head;
 		head = head->next;
-		free(tmp);
+		free(temp);
 	}
 }
