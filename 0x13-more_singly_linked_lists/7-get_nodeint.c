@@ -2,7 +2,8 @@
 #include <stdio.h>
 /**
  * get_nodeint_at_index - returns no. of elements
- * @h: pointer to header
+ * @head: pointer to header
+ * @index: node index in list
  *
  * Return: nth node
  */
@@ -16,10 +17,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	temp = head;
 	while (temp != NULL && i < index)
 	{
-		if (i == index)
-		{
-			break;
-		}
 		temp = temp->next;
 		i++;
 	}
