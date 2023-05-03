@@ -16,6 +16,8 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	temp = head;
 	while (temp != NULL)
 	{
+		if (i > index)
+			return (NULL);
 		if (i == index)
 		{
 			break;
