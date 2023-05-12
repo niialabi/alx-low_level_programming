@@ -37,13 +37,16 @@ int main(int argc, char **argv)
 	} while (read_from > 0);
 	read_from = close(fd1);
 	if (read_from == -1)
-		error_print(100, from, to);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", read_from);
+		exit(100);
+	}
 	write_to = close(fd2);
 	if (write_to == -1)
-		error_print(100, from, to);
-
-
-
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", write_to);
+		exit(100);
+	}
 	return (0);
 }
 /**
