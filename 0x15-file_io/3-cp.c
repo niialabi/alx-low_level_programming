@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * main - main function
+ * @argc: arg count
+ * @argv: parameter array
+ *
+ * Return: 0-success/ other fail
+ */
 int main(int argc, char **argv)
 {
 	/*DECLARATIONS*/
@@ -17,15 +24,17 @@ int main(int argc, char **argv)
 	fd1 = open(from, O_RDONLY);
 	if (fd1 == -1)
 		error_print(98, from, to);
-	read_from = read(fd1, buffer, 1024);
-	if (read_from == -1)
-		error_print(98, from, to);
 	fd2 = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 		error_print(99, from, to);
-	write_to = write(fd2, buffer, read_from);
-	if (write_to == -1)
-		error_print(99, from, to);
+	do {
+		read_from = read(fd1, buffer, 1024);
+		if (read_from == -1)
+			error_print(98, from, to);
+		write_to = write(fd2, buffer, read_from);
+		if (write_to == -1)
+			error_print(99, from, to);
+	} while (read_from > 0);
 	read_from = close(fd1);
 	if (read_from == -1)
 		error_print(100, from, to);
@@ -38,8 +47,10 @@ int main(int argc, char **argv)
 	return (0);
 }
 /**
- * error_print - prog to print 
- *
+ * error_print - prog to print
+ * @ret: error code
+ * @from: from-file
+ * @to: to-file
  */
 void error_print(int ret, char *from, char *to)
 {
@@ -47,16 +58,13 @@ void error_print(int ret, char *from, char *to)
 	{
 		case 97:
 			dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-			 break;
+			break;
 		case 98:
-			 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
-			 break;
-		case 99: 
-			 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
-			 break;
-		case 100: 
-			 dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", to);
-			  break;
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
+			break;
+		case 99:
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
+			break;
 	}
-	exit (ret);
+	exit(ret);
 }
