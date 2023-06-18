@@ -12,7 +12,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	dlistint_t *tmp = head;
 	unsigned int count = 0;
 
-	if (index < 1 || head == NULL)
+	if (head == NULL)
 		return (NULL);
 	while (tmp != NULL && count < index)
 	{
