@@ -12,11 +12,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	size_t list_len = 0;
 	int i, j;
 	dlistint_t *temp, *new_node, *h2;
-	
+
 	h2 = *h;
 	for (j = 0; h2; h2 = h2->next, j++)
 		;
-	list_len =j;
+	list_len = j;
 	if (list_len < idx)
 		return (NULL);
 	if (!idx)
