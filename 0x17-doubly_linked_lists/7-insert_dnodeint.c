@@ -9,10 +9,14 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	size_t list_len = dlistint_len(*h);
-	int i;
-	dlistint_t *temp, *new_node;
-
+	size_t list_len = 0;
+	int i, j;
+	dlistint_t *temp, *new_node, *h2;
+	
+	h2 = *h;
+	for (j = 0; h2; h2 = h2->next, j++)
+		;
+	list_len =j;
 	if (list_len < idx)
 		return (NULL);
 	if (!idx)
@@ -33,19 +37,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp->prev = new_node;
 	}
 	return (new_node);
-}
-
-/**
- * dlistint_len - counts no.of elements
- * @h: header pointer
- *
- * Return: n nodes
- */
-size_t dlistint_len(const dlistint_t *h)
-{
-	size_t a;
-
-	for (a = 0; h; h = h->next, a++)
-		;
-	return (a);
 }
