@@ -1,0 +1,6 @@
+# first make file
+school : school.c main.c m.h
+
+.PHONY : clean
+clean : 
+	rm school
