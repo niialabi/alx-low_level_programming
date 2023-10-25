@@ -1,3 +1,3 @@
 all : school_target
 school_target : school.c main.c
-	make -f 0-Makefile gcc main.c school.c -o school	
+	gcc main.c school.c -o school
