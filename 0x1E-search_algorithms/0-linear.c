@@ -4,8 +4,9 @@
  * linear_search - searches value in array
  * @array: Pointer to array
  * @size: size of array
- *
- * */
+ * @value: value to search for
+ * Return: int (value-index) and value
+ */
 
 int linear_search(int *array, size_t size, int value)
 {
